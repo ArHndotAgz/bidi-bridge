@@ -3,6 +3,8 @@
 Local environment: Windows, Node.js 24.15.0, npm 11.12.1.
 
 - `npm run check`: 12 tests passed; browser bundle built successfully.
+- [GitHub CI](https://github.com/ArHndotAgz/bidi-bridge/actions/runs/38070445026): completed successfully on the configured Node 20/22/24 matrix.
+- [Public demo](https://arhnagz.me/bidi-bridge/): GitHub Pages deployment completed and the live page was opened successfully.
 - `npm install`: 0 vulnerabilities reported by npm at installation time. This is not a security audit.
 - Real browser smoke check: the Codex in-app browser rendered all 14 fixtures. Computed styles were inspected through browser automation.
 

@@ -4,6 +4,8 @@ Readable mixed-direction text for Persian, Arabic, Hebrew and Urdu alongside Eng
 
 **Experimental 0.1.0.** A Markdown renderer, a `markdown-it` plugin, and a fixture lab. This is an independently developed project; it is not affiliated with Anthropic or OpenAI and has not been integrated into their products.
 
+[Try the live lab](https://arhnagz.me/bidi-bridge/) · [Test/build runs](https://github.com/ArHndotAgz/bidi-bridge/actions)
+
 ## Why this exists
 
 A Persian explanation with `npm install`, an Arabic sentence with a URL, or a Hebrew paragraph with a file path can become difficult to read when the application gives everything the same direction. Unicode and HTML already provide the underlying mechanisms. This project focuses on applying those mechanisms consistently and testing the boundaries.

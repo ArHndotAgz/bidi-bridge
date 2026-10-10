@@ -1,0 +1,20 @@
+{
+  "name": "@arhndotagz/bidi-bridge",
+  "version": "0.1.0",
+  "description": "Direction-aware Markdown rendering and reproducible mixed-script fixtures for chat interfaces.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Amirhossein Agz",
+  "bin": { "bidi-md": "./src/cli.js" },
+  "exports": { ".": "./src/index.js", "./style.css": "./src/style.css" },
+  "files": ["src", "fixtures", "README.md", "LICENSE"],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "build": "node scripts/build.mjs",
+    "demo": "node scripts/serve.mjs",
+    "check": "npm test && npm run build"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": { "markdown-it": "^14.1.0" },
+  "devDependencies": { "esbuild": "^0.25.0", "jsdom": "^26.0.0" }
+}

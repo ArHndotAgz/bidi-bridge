@@ -1,0 +1,7 @@
+.bidi-content :is(p,h1,h2,h3,h4,h5,h6,li,th,td) { text-align: start; }
+.bidi-content .bidi-code { direction: ltr; unicode-bidi: isolate; }
+.bidi-content .bidi-code-block { direction: ltr; unicode-bidi: isolate; text-align: left; }
+.bidi-content .bidi-code-block pre { direction: ltr; text-align: left; overflow-x: auto; }
+.bidi-content a { unicode-bidi: isolate; overflow-wrap: anywhere; }
+.bidi-content :is(ul,ol) { padding-inline: 2rem; }
+.bidi-content li { list-style-position: inside; }

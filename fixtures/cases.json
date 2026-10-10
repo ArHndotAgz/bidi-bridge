@@ -1,0 +1,16 @@
+[
+  {"id":"fa-code","language":"fa","title":"Persian with inline command","markdown":"برای نصب، دستور `npm install bidi-bridge` را اجرا کن (نسخهٔ 2.1).","expect":"rtl","check":"The command reads left to right; the Persian sentence starts on the right."},
+  {"id":"ar-link","language":"ar","title":"Arabic with a URL","markdown":"افتح https://example.com/docs?v=2 ثم اضغط على زر Save.","expect":"rtl","check":"The URL stays contiguous and its query is readable."},
+  {"id":"he-code","language":"he","title":"Hebrew with an identifier","markdown":"בדוק את `user.name` לפני הפעלת הבדיקה (42).","expect":"rtl","check":"The identifier is isolated from surrounding punctuation."},
+  {"id":"ur-code","language":"ur","title":"Urdu with a path","markdown":"فائل `src/main.ts` کھولیں اور تبدیلی محفوظ کریں۔","expect":"rtl","check":"The path reads left to right inside the Urdu paragraph."},
+  {"id":"code-first","language":"fa","title":"Command before Persian prose","markdown":"`dotnet test` را اجرا کن و نتیجه را بررسی کن.","expect":"rtl","check":"Leading isolated code does not choose the paragraph direction."},
+  {"id":"link-first","language":"fa","title":"URL before Persian prose","markdown":"https://example.com راهنمای نصب است.","expect":"rtl","check":"An isolated leading URL does not force the paragraph to LTR."},
+  {"id":"english","language":"en","title":"English with Persian quotation","markdown":"The Persian greeting is سلام; run `npm test` afterwards.","expect":"ltr","check":"English remains LTR; no blanket RTL rule is applied."},
+  {"id":"numbers","language":"fa","title":"Numbers and punctuation","markdown":"نسخهٔ 2.1 در تاریخ ۱۴۰۵/۰۷/۱۸ منتشر شد؛ نتیجه: ۱۲۳٫۴۵٪.","expect":"rtl","check":"Check decimals, percent signs and separators with a native reader."},
+  {"id":"list","language":"fa","title":"Mixed-direction list","markdown":"1. فایل `app.cs` را باز کن.\n2. Run `dotnet test`.\n3. نتیجه را ذخیره کن.","expect":"mixed","check":"Each list item follows its own prose direction; nesting stays intact."},
+  {"id":"table","language":"fa","title":"Table cells","markdown":"| توضیح | Command |\n| --- | --- |\n| اجرای تست | `dotnet test` |\n| نصب | `npm install` |","expect":"mixed","check":"Cells resolve independently; the table's column order is not reversed."},
+  {"id":"fenced","language":"fa","title":"Code fence and Persian explanation","markdown":"این کد را اجرا کن:\n\n```js\nconst message = 'سلام';\nconsole.log(message);\n```","expect":"rtl","check":"The code block remains LTR and preserves the literal source string."},
+  {"id":"quote","language":"ar","title":"Blockquote and nested list","markdown":"> تحقق من `status === 200`.\n>\n> - افتح الملف.\n>   - Run `npm test`.","expect":"mixed","check":"Nested prose and code keep separate direction boundaries."},
+  {"id":"ambiguous","language":"fa","title":"Known ambiguity: English name first","markdown":"OpenAI برای توسعه‌دهندگان ابزار می‌سازد.","expect":"ltr","check":"Auto uses the first strong letter. Select RTL explicitly for this Persian sentence."},
+  {"id":"html","language":"en","title":"Untrusted raw HTML","markdown":"<img src=x onerror=alert(1)>\n\n[suspicious](javascript:alert(1))","expect":"ltr","check":"HTML is displayed as text; javascript links are not active."}
+]

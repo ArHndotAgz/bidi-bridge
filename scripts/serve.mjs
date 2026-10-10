@@ -6,6 +6,7 @@ const files = new Map([
   ['/app.js', ['dist/app.js', 'text/javascript; charset=utf-8']],
   ['/style.css', ['dist/style.css', 'text/css; charset=utf-8']],
   ['/bidi.css', ['dist/bidi.css', 'text/css; charset=utf-8']]
+  ,['/notices.txt', ['dist/notices.txt', 'text/plain; charset=utf-8']]
 ]);
 createServer(async (req, res) => {
   const entry = files.get(new URL(req.url, 'http://localhost').pathname);
